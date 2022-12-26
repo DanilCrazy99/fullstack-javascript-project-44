@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const myFunc = () => {
-  const name = readlineSync.question('Как тебя зовут? ');
+  const name = readlineSync.question("What's your name? ");
   console.log(`Hello, ${name}!`);
 };
 
