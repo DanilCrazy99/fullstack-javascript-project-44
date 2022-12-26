@@ -21,12 +21,6 @@ const myFunc = (num) => {
   }
 };
 
-const Hello = () => {
-  const namePlayer = readlineSync.question("What's your name? ");
-  console.log(`Hello, ${namePlayer}!`);
-  return namePlayer;
-};
-
 const gameEven = (namePlayer) => {
   for (let i = 1; i <= 3; i += 1) {
     if (!incorrectAnswer) {
@@ -38,4 +32,4 @@ const gameEven = (namePlayer) => {
   }
 };
 
-export { gameEven, Hello };
+export default gameEven;
