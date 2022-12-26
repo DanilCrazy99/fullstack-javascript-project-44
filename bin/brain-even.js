@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { gameEven, Hello } from '../src/lbg_e.js';
 
 const namePlayer = Hello();
