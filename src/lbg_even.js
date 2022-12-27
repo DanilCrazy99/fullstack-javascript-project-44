@@ -1,33 +1,35 @@
 // file with logic for brain game "even"
 
 import readlineSync from 'readline-sync';
+import { Mistake, Congratulations } from './cli.js';
 
 let incorrectAnswer = false;
 
-const myFunc = (num) => {
-  const myAnswer = readlineSync.question('Your answer: ');
+const answerToQuestion = (num, namePlayer) => {
+  const answer = readlineSync.question('Your answer: ');
   const answerVal = num % 2;
-  let correctAnswer = '';
+  let result = '';
   if (answerVal === 0) {
-    correctAnswer = 'yes';
+    result = 'yes';
   } else {
-    correctAnswer = 'no';
+    result = 'no';
   }
-  if (myAnswer === correctAnswer) {
+  if (answer === result) {
     console.log('Correct!');
   } else {
     incorrectAnswer = true;
-    console.log(`'${myAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    Mistake(namePlayer, answer, result);
   }
 };
 
 const gameEven = (namePlayer) => {
-  for (let i = 1; i <= 3; i += 1) {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  for (let i = 0; i <= 2; i += 1) {
     if (!incorrectAnswer) {
       const num = Math.floor(Math.random() * 10 + Math.random() * 10);
       console.log('Question: ', num);
-      myFunc(num);
-      if (i === 3) console.log(`Congratulations, ${namePlayer}!`);
+      answerToQuestion(num, namePlayer);
+      if (i === 2) Congratulations(namePlayer);
     }
   }
 };

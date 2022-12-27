@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Greeting } from '../src/cli.js';
-import gameEven from '../src/lbg_even.js';
+import CalcGame from '../src/lbg_calc.js';
 
 const namePlayer = Greeting();
-gameEven(namePlayer);
+CalcGame(namePlayer);
