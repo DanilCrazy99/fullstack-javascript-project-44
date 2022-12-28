@@ -1,6 +1,6 @@
 // file with logic for brain game "calc"
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from './egl.js';
+import { Mistake, Congratulations } from './index.js';
 import countRounds from './games_settings.js';
 
 const gameCalc = (namePlayer) => {
