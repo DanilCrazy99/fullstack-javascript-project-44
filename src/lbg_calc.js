@@ -1,6 +1,6 @@
 // file with logic for brain game "calc"
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from './cli.js';
+import { Mistake, Congratulations } from './egl.js';
 
 const gameCalc = (namePlayer) => {
   console.log('What is the result of the expression?');

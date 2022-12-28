@@ -23,8 +23,8 @@
   "homepage": "https://github.com/DanilCrazy99/fullstack-javascript-project-44#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-even": "bin/games/brain-even.js",
+    "brain-calc": "bin/games/brain-calc.js"
   },
   "dependencies": {
     "eslint": "^8.30.0",

@@ -1,7 +1,7 @@
 // file with logic for brain game "even"
 
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from './cli.js';
+import { Mistake, Congratulations } from './egl.js';
 
 let incorrectAnswer = false;
 
