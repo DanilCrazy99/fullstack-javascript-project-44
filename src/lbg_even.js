@@ -2,6 +2,7 @@
 
 import readlineSync from 'readline-sync';
 import { Mistake, Congratulations } from './egl.js';
+import countRounds from './games_settings.js';
 
 let incorrectAnswer = false;
 
@@ -24,12 +25,12 @@ const answerToQuestion = (num, namePlayer) => {
 
 const gameEven = (namePlayer) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i <= 2; i += 1) {
+  for (let i = 0; i <= countRounds - 1; i += 1) {
     if (!incorrectAnswer) {
       const num = Math.floor(Math.random() * 10 + Math.random() * 10);
       console.log('Question: ', num);
       answerToQuestion(num, namePlayer);
-      if (i === 2) Congratulations(namePlayer);
+      if (i === countRounds - 1) Congratulations(namePlayer);
     }
   }
 };

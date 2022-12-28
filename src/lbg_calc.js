@@ -1,10 +1,11 @@
 // file with logic for brain game "calc"
 import readlineSync from 'readline-sync';
 import { Mistake, Congratulations } from './egl.js';
+import countRounds from './games_settings.js';
 
 const gameCalc = (namePlayer) => {
   console.log('What is the result of the expression?');
-  for (let i = 0; i <= 2; i += 1) {
+  for (let i = 0; i <= countRounds - 1; i += 1) {
     let result = 0;
     const firstNum = Math.floor(Math.random() * 10);
     const secondNum = Math.floor(Math.random() * 10);
@@ -25,7 +26,7 @@ const gameCalc = (namePlayer) => {
       break;
     }
     console.log('Correct!');
-    if (i === 2) {
+    if (i === countRounds - 1) {
       Congratulations(namePlayer);
     }
   }
