@@ -4,3 +4,4 @@
 
 #### Video with game "Even" https://asciinema.org/a/T3RKCkctcsXOogP4CHZPWgyfH
 #### Video with game "Calc" https://asciinema.org/a/w0wNinpjvJOpHcbVw1hOL0oqC
+#### Video with game "Greatest Common Divisor" https://asciinema.org/a/F4Gmu1dmxvGF8Lrq3TbjNF6hX

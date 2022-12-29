@@ -8,12 +8,12 @@ const Greeting = () => {
   return namePlayer;
 };
 
-const Mistake = (namePlayer, answer, result) => {
+const Mistake = (answer, result, namePlayer = 'Player') => {
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
   console.log(`Let's try again, ${namePlayer}!`);
 };
 
-const Congratulations = (namePlayer) => {
+const Congratulations = (namePlayer = 'Player') => {
   console.log(`Congratulations, ${namePlayer}!`);
 };
 

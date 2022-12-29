@@ -22,7 +22,7 @@ const gameCalc = (namePlayer) => {
     }
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) !== result) {
-      Mistake(namePlayer, answer, result);
+      Mistake(answer, result, namePlayer);
       break;
     }
     console.log('Correct!');
