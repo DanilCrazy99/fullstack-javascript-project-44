@@ -1,6 +1,7 @@
 // main logic games
 import readlineSync from 'readline-sync';
 
+// Приветствие игрока
 const Greeting = () => {
   console.log('Welcome to the Brain Games!');
   const namePlayer = readlineSync.question("What's your name? ");

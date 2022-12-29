@@ -5,6 +5,7 @@ import { Mistake, Congratulations } from './index.js';
 import { countRounds } from './games_settings.js';
 
 const Denominator = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37];
+
 const findTempDenominator = (num, arrayTempDenominator) => {
   let tempNum = num;
   while (tempNum !== 1) {
@@ -17,6 +18,7 @@ const findTempDenominator = (num, arrayTempDenominator) => {
     }
   }
 };
+
 const gameGCD = (namePlayer = 'Player') => {
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i <= countRounds - 1; i += 1) {
