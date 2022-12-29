@@ -2,7 +2,7 @@
 
 import readlineSync from 'readline-sync';
 import { Mistake, Congratulations } from './index.js';
-import countRounds from './games_settings.js';
+import { countRounds } from './games_settings.js';
 
 const Denominator = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37];
 const findTempDenominator = (num, arrayTempDenominator) => {

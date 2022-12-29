@@ -6,3 +6,4 @@
 #### Video with game "Calc" https://asciinema.org/a/w0wNinpjvJOpHcbVw1hOL0oqC
 #### Video with game "Greatest Common Divisor" https://asciinema.org/a/F4Gmu1dmxvGF8Lrq3TbjNF6hX
 #### Video with game "Progression" https://asciinema.org/a/DRKfzFsCm3HfteqcPmOgLODy0
+#### Video with game "Prime" https://asciinema.org/a/lTSPIqWKxoTJUVkANK1trVp7U
