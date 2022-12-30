@@ -28,7 +28,7 @@ const gameEven = (namePlayer) => {
   for (let i = 0; i <= countRounds - 1; i += 1) {
     if (!incorrectAnswer) {
       const num = Math.floor(Math.random() * 10 + Math.random() * 10);
-      console.log('Question: ', num);
+      console.log(`Question: ${num}`);
       answerToQuestion(num, namePlayer);
       if (i === countRounds - 1) Congratulations(namePlayer);
     }
