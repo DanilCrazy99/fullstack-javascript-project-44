@@ -19,7 +19,7 @@ const answerToQuestion = (num, namePlayer) => {
     console.log('Correct!');
   } else {
     incorrectAnswer = true;
-    Mistake(namePlayer, answer, result);
+    Mistake(result, answer, namePlayer);
   }
 };
 
