@@ -11,13 +11,13 @@ const gameCalc = (namePlayer) => {
     const secondNum = Math.floor(Math.random() * 10);
     const expressionNumber = Math.floor(Math.random() * 3 + 1); // 1 = +; 2 = -; 3 = *
     if (expressionNumber === 1) {
-      console.log(`${firstNum} + ${secondNum}`);
+      console.log(`Question: ${firstNum} + ${secondNum}`);
       result = firstNum + secondNum;
     } else if (expressionNumber === 2) {
-      console.log(`${firstNum} - ${secondNum}`);
+      console.log(`Question: ${firstNum} - ${secondNum}`);
       result = firstNum - secondNum;
     } else if (expressionNumber === 3) {
-      console.log(`${firstNum} * ${secondNum}`);
+      console.log(`Question: ${firstNum} * ${secondNum}`);
       result = firstNum * secondNum;
     }
     const answer = readlineSync.question('Your answer: ');
