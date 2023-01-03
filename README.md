@@ -1,6 +1,11 @@
 # Brain games
-This project includes five mathematics games.
-
+This project includes five mathematics games
+- Brain Even
+- Brain Calc
+- Brain Greatest Common Divisor
+- Brain Progression
+- Brain Prime
+#
 First step, clone this repository with command
 `git clone https://github.com/DanilCrazy99/fullstack-javascript-project-44`
 
