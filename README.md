@@ -6,8 +6,9 @@ First step, clone this repository with command
 
 Second step, install programm with command
 `make install`
-
+#
 Now, we can launch games in console.
+
 Write one option out of five:
 - `brain-even` 
 > You must input "yes" if the number is even, otherwise answer "no".
@@ -33,6 +34,8 @@ Video with game "Progression" https://asciinema.org/a/DRKfzFsCm3HfteqcPmOgLODy0 
 > You must input "yes" if given number is prime. Otherwise answer "no".
 
 Video with game "Prime" https://asciinema.org/a/lTSPIqWKxoTJUVkANK1trVp7U [![asciicast](https://asciinema.org/a/lTSPIqWKxoTJUVkANK1trVp7U.svg)](https://asciinema.org/a/lTSPIqWKxoTJUVkANK1trVp7U)
+
+> In all games first input been your name.
 
 > All games in default settings have 3 rounds.
 
