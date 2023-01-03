@@ -34,9 +34,11 @@ Video with game "Progression" https://asciinema.org/a/DRKfzFsCm3HfteqcPmOgLODy0 
 
 Video with game "Prime" https://asciinema.org/a/lTSPIqWKxoTJUVkANK1trVp7U [![asciicast](https://asciinema.org/a/lTSPIqWKxoTJUVkANK1trVp7U.svg)](https://asciinema.org/a/lTSPIqWKxoTJUVkANK1trVp7U)
 
-All games in default settings have 3 rounds.
-If one time you answer wrong, you game over.
-Good luck! :)
+> All games in default settings have 3 rounds.
+
+> If one time you answer wrong, you game over.
+
+> Good luck! :)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/DanilCrazy99/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/DanilCrazy99/fullstack-javascript-project-44/actions)
