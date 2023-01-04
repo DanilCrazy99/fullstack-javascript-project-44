@@ -6,7 +6,7 @@ import { countRounds } from '../games_settings.js';
 
 let incorrectAnswer = false;
 
-const answerToQuestion = (num, namePlayer) => {
+const answerToQuestion = (num) => {
   const answer = readlineSync.question('Your answer: ');
   const answerVal = num % 2;
   let result = '';
@@ -19,18 +19,18 @@ const answerToQuestion = (num, namePlayer) => {
     console.log('Correct!');
   } else {
     incorrectAnswer = true;
-    Mistake(result, answer, namePlayer);
+    Mistake(result, answer);
   }
 };
 
-const gameEven = (namePlayer) => {
+const gameEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i <= countRounds - 1; i += 1) {
     if (!incorrectAnswer) {
       const num = Math.floor(Math.random() * 10 + Math.random() * 10);
       console.log(`Question: ${num}`);
-      answerToQuestion(num, namePlayer);
-      if (i === countRounds - 1) Congratulations(namePlayer);
+      answerToQuestion(num);
+      if (i === countRounds - 1) Congratulations();
     }
   }
 };

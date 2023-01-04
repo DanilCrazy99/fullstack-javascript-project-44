@@ -1,21 +1,12 @@
 // main logic games
-import readlineSync from 'readline-sync';
 
-// Приветствие игрока
-const Greeting = () => {
-  console.log('Welcome to the Brain Games!');
-  const namePlayer = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${namePlayer}!`);
-  return namePlayer;
-};
-
-const Mistake = (answer, result, namePlayer = 'Player') => {
+const Mistake = (answer, result) => {
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-  console.log(`Let's try again, ${namePlayer}!`);
+  console.log("Let's try again!");
 };
 
-const Congratulations = (namePlayer = 'Player') => {
-  console.log(`Congratulations, ${namePlayer}!`);
+const Congratulations = () => {
+  console.log('Congratulations!');
 };
 
-export { Greeting, Mistake, Congratulations };
+export { Mistake, Congratulations };

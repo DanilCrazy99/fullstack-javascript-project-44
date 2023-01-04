@@ -19,7 +19,7 @@ const findTempDenominator = (num, arrayTempDenominator) => {
   }
 };
 
-const gameGCD = (namePlayer = 'Player') => {
+const gameGCD = () => {
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i <= countRounds - 1; i += 1) {
     const tempDenominator1 = [];
@@ -41,10 +41,10 @@ const gameGCD = (namePlayer = 'Player') => {
     console.log(`Question: ${num1} ${num2}`);
     const answer = readlineSync.question('Your answer: ');
     if (result !== Number(answer)) {
-      Mistake(answer, result, namePlayer);
+      Mistake(answer, result);
       break;
     } else if (i === countRounds - 1) {
-      Congratulations(namePlayer);
+      Congratulations();
     }
   }
 };

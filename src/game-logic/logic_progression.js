@@ -4,7 +4,7 @@ import readlineSync from 'readline-sync';
 import { Mistake, Congratulations } from '../index.js';
 import { lengthProgression, countRounds } from '../games_settings.js';
 
-const gameProgression = (namePlayer = 'Player') => {
+const gameProgression = () => {
   console.log('What number is missing in the progression?');
   for (let i = 0; i <= countRounds - 1; i += 1) {
     const lengthInGame = Math.floor(Math.random() * (lengthProgression - 5) + 5);
@@ -27,11 +27,11 @@ const gameProgression = (namePlayer = 'Player') => {
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Answer: ');
     if (Number(answer) !== result) {
-      Mistake(answer, result, namePlayer);
+      Mistake(answer, result);
       break;
     }
     if (i === countRounds - 1) {
-      Congratulations(namePlayer);
+      Congratulations();
     }
   }
 };

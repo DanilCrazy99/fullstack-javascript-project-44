@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 import { Mistake, Congratulations } from '../index.js';
 import { countRounds } from '../games_settings.js';
 
-const gameCalc = (namePlayer) => {
+const gameCalc = () => {
   console.log('What is the result of the expression?');
   for (let i = 0; i <= countRounds - 1; i += 1) {
     let result = 0;
@@ -22,12 +22,12 @@ const gameCalc = (namePlayer) => {
     }
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) !== result) {
-      Mistake(answer, result, namePlayer);
+      Mistake(answer, result);
       break;
     }
     console.log('Correct!');
     if (i === countRounds - 1) {
-      Congratulations(namePlayer);
+      Congratulations();
     }
   }
 };
