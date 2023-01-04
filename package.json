@@ -2,7 +2,6 @@
   "name": "@hexlet/code",
   "version": "0.0.1",
   "description":"Brain games. This project includes five mathematics games: Brain Even, Brain Calc, Brain Greatest Common Divisor, Brain Progression, Brain Prime",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
