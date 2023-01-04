@@ -1,8 +1,8 @@
 // logic for brain game "greatest common divisor"
 
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from './index.js';
-import { lengthProgression, countRounds } from './games_settings.js';
+import { Mistake, Congratulations } from '../index.js';
+import { lengthProgression, countRounds } from '../games_settings.js';
 
 const gameProgression = (namePlayer = 'Player') => {
   console.log('What number is missing in the progression?');

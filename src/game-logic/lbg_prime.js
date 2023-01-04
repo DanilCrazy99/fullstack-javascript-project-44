@@ -1,8 +1,8 @@
 // logic for brain game "prime"
 
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from './index.js';
-import { countRounds } from './games_settings.js';
+import { Mistake, Congratulations } from '../index.js';
+import { countRounds } from '../games_settings.js';
 
 const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19];
 
