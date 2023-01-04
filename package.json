@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "0.0.1",
-  "description": "[![Actions Status](https://github.com/DanilCrazy99/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/DanilCrazy99/fullstack-javascript-project-44/actions)",
+  "description":"Brain games. This project includes five mathematics games: Brain Even, Brain Calc, Brain Greatest Common Divisor, Brain Progression, Brain Prime",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
