@@ -3,18 +3,19 @@
 import readlineSync from 'readline-sync';
 import { Mistake, Congratulations } from '../index.js';
 import { lengthProgression, countRounds } from '../games_settings.js';
+import getRandomNum from '../utils.js';
 
 const gameProgression = () => {
   console.log('What number is missing in the progression?');
   for (let i = 0; i <= countRounds - 1; i += 1) {
-    const lengthInGame = Math.floor(Math.random() * (lengthProgression - 5) + 5);
-    const startNum = Math.floor(Math.random() * 10 + 1);
+    const lengthInGame = getRandomNum(5, lengthProgression);
+    const startNum = getRandomNum(1, 10);
     const progressionArr = [startNum];
-    const progressionStep = Math.floor(Math.random() * 10 + 1);
+    const progressionStep = getRandomNum(1, 10);
     for (let a = 1; a <= lengthInGame - 1; a += 1) {
       progressionArr.push(startNum + a * progressionStep);
     }
-    const randomCellArr = Math.floor(Math.random() * progressionArr.length);
+    const randomCellArr = getRandomNum(0, progressionArr.length - 1);
     const result = progressionArr[randomCellArr];
     progressionArr[randomCellArr] = '..';
     let question = '';

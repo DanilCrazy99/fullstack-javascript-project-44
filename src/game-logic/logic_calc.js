@@ -2,14 +2,15 @@
 import readlineSync from 'readline-sync';
 import { Mistake, Congratulations } from '../index.js';
 import { countRounds } from '../games_settings.js';
+import getRandomNum from '../utils.js';
 
 const gameCalc = () => {
   console.log('What is the result of the expression?');
   for (let i = 0; i <= countRounds - 1; i += 1) {
     let result = 0;
-    const firstNum = Math.floor(Math.random() * 10);
-    const secondNum = Math.floor(Math.random() * 10);
-    const expressionNumber = Math.floor(Math.random() * 3 + 1); // 1 = +; 2 = -; 3 = *
+    const firstNum = getRandomNum(0, 10);
+    const secondNum = getRandomNum(0, 10);
+    const expressionNumber = getRandomNum(1, 3); // 1 = +; 2 = -; 3 = *
     if (expressionNumber === 1) {
       console.log(`Question: ${firstNum} + ${secondNum}`);
       result = firstNum + secondNum;
