@@ -1,12 +1,12 @@
 // file with logic for brain game "calc"
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from '../index.js';
+import { Mistake, Congratulations } from '../cli.js';
 import { countRounds } from '../games_settings.js';
 import getRandomNum from '../utils.js';
 
 const gameCalc = () => {
   console.log('What is the result of the expression?');
-  for (let i = 0; i <= countRounds - 1; i += 1) {
+  for (let i = 0; i < countRounds; i += 1) {
     let result = 0;
     const firstNum = getRandomNum(0, 10);
     const secondNum = getRandomNum(0, 10);

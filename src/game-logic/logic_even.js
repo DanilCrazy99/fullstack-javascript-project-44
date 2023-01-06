@@ -1,7 +1,7 @@
 // file with logic for brain game "even"
 
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from '../index.js';
+import { Mistake, Congratulations } from '../cli.js';
 import { countRounds } from '../games_settings.js';
 import getRandomNum from '../utils.js';
 
@@ -26,7 +26,7 @@ const answerToQuestion = (num) => {
 
 const gameEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 0; i <= countRounds - 1; i += 1) {
+  for (let i = 0; i < countRounds; i += 1) {
     if (!incorrectAnswer) {
       const num = getRandomNum(1, 20);
       console.log(`Question: ${num}`);

@@ -1,7 +1,7 @@
 // logic for brain game "greatest common divisor"
 
 import readlineSync from 'readline-sync';
-import { Mistake, Congratulations } from '../index.js';
+import { Mistake, Congratulations } from '../cli.js';
 import { countRounds } from '../games_settings.js';
 import getRandomNum from '../utils.js';
 
@@ -22,7 +22,7 @@ const findTempDenominator = (num, arrayTempDenominator) => {
 
 const gameGCD = () => {
   console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 0; i <= countRounds - 1; i += 1) {
+  for (let i = 0; i < countRounds; i += 1) {
     const tempDenominator1 = [];
     const tempDenominator2 = [];
     const num1 = getRandomNum(0, 20);
