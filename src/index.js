@@ -12,10 +12,10 @@ const ENGINE = (gameDescription, newRound) => {
     const answerUser = readlineSync.question('Your answer: ');
     if (resultRound !== answerUser) {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${resultRound}'.`);
-      return console.log("Let's try again!");
+      return console.log(`Let's try again, ${namePlayer}!`);
     }
   }
-  return console.log('Congratulations!');
+  return console.log(`Congratulations, ${namePlayer}!`);
 };
 
 export default ENGINE;
