@@ -7,11 +7,11 @@ const ENGINE = (gameDescription, newRound) => {
   console.log(`Hello, ${namePlayer}!`);
   console.log(gameDescription);
   for (let i = 0; i < countRounds; i += 1) {
-    const [question, result] = newRound();
-    console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (result !== answer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+    const [questionRound, resultRound] = newRound();
+    console.log(`Question: ${questionRound}`);
+    const answerUser = readlineSync.question('Your answer: ');
+    if (resultRound !== answerUser) {
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${resultRound}'.`);
       return console.log("Let's try again!");
     }
   }
