@@ -14,11 +14,8 @@ const ENGINE = (gameDescription, newRound) => {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
       return console.log("Let's try again!");
     }
-    if (i === countRounds) {
-      console.log('Congratulations!');
-    }
   }
-  return 0;
+  return console.log('Congratulations!');
 };
 
 export default ENGINE;
