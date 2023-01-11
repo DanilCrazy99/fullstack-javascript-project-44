@@ -3,29 +3,37 @@
 import getRandomNum from '../utils.js';
 import ENGINE from '../index.js';
 
-const rulesGame = 'What is the result of the expression?';
+const rulesGame = 'What is the result of the expressionSign?';
 
-const generateRound = () => {
+const getRandomexpressionSign = () => {
+  const expressionSignArr = ['+', '-', '*'];
+  return expressionSignArr[getRandomNum(0, expressionSignArr.length - 1)];
+};
+
+const calculation = (firstNum, secondNum, expressionSign) => {
   let result = 0;
-  const firstNum = getRandomNum(0, 10);
-  const secondNum = getRandomNum(0, 10);
-  const expressionArr = ['+', '-', '*'];
-  const expressionNumber = getRandomNum(0, 2); // 1 = +; 2 = -; 3 = *
-  switch (expressionNumber) {
-    case 0:
+  switch (expressionSign) {
+    case '+':
       result = firstNum + secondNum;
       break;
-    case 1:
+    case '-':
       result = firstNum - secondNum;
       break;
-    case 2:
+    case '*':
       result = firstNum * secondNum;
       break;
     default:
-      console.log('Some error');
-      break;
+      throw new Error(`Operator ${expressionSign} - is incorrect`);
   }
-  return [`${firstNum} ${expressionArr[expressionNumber]} ${secondNum}`, String(result)];
+  return result;
+};
+
+const generateRound = () => {
+  const firstNum = getRandomNum(0, 10);
+  const secondNum = getRandomNum(0, 10);
+  const expressionSignInThisRound = getRandomexpressionSign();
+  const result = calculation(firstNum, secondNum, expressionSignInThisRound);
+  return [`${firstNum} ${expressionSignInThisRound} ${secondNum}`, String(result)];
 };
 
 export default () => { ENGINE(rulesGame, generateRound); };
