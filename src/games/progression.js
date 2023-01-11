@@ -6,13 +6,10 @@ import ENGINE from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const generateRound = () => {
-  const lengthInGame = getRandomNum(5, lengthProgression);
-  const startNum = getRandomNum(1, 10);
+const generateProgression = (startNum, lenProgression, steps) => {
   const progressionArr = [startNum];
-  const progressionStep = getRandomNum(1, 10);
-  for (let a = 1; a < lengthInGame; a += 1) {
-    progressionArr.push(startNum + a * progressionStep);
+  for (let a = 1; a < lenProgression; a += 1) {
+    progressionArr.push(startNum + a * steps);
   }
   const randomCellArr = getRandomNum(0, progressionArr.length - 1);
   const result = progressionArr[randomCellArr];
@@ -24,6 +21,14 @@ const generateRound = () => {
       question += ' ';
     }
   }
+  return [question, result];
+};
+
+const generateRound = () => {
+  const lenProgression = getRandomNum(5, lengthProgression);
+  const startNum = getRandomNum(1, 10);
+  const progressionStep = getRandomNum(1, 10);
+  const [question, result] = generateProgression(startNum, lenProgression, progressionStep);
   return [question, String(result)];
 };
 
