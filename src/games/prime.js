@@ -6,13 +6,16 @@ import { primeNumbers } from '../games_settings.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateRound = () => {
+const checkIsPrimeNumber = (number) => {
   let result = 'no';
-  const number = getRandomNum(1, 20);
   if (primeNumbers.includes(number)) {
     result = 'yes';
   }
-  return [number, result];
+  return result;
+};
+const generateRound = () => {
+  const number = getRandomNum(1, 20);
+  return [number, checkIsPrimeNumber(number)];
 };
 
 export default () => { ENGINE(rules, generateRound); };
