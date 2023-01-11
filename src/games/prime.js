@@ -2,8 +2,8 @@
 
 import getRandomNum from '../utils.js';
 import ENGINE from '../index.js';
+import { primeNumbers } from '../games_settings.js';
 
-const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19];
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateRound = () => {
