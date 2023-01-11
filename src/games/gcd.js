@@ -2,40 +2,47 @@
 
 import ENGINE from '../index.js';
 import getRandomNum from '../utils.js';
+import { primeNumbers } from '../games_settings.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
-const Denominator = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37];
 
-const findTempDenominator = (num, arrayTempDenominator) => {
+const findTempDenominator = (num) => {
+  const arrayTempDenominator = [];
   let tempNum = num;
   while (tempNum !== 1) {
-    for (let a = 0; a < Denominator.length; a += 1) {
-      if (tempNum % Denominator[a] === 0) {
-        tempNum /= Denominator[a];
-        arrayTempDenominator.push(Denominator[a]);
+    for (let a = 0; a < primeNumbers.length; a += 1) {
+      if (tempNum % primeNumbers[a] === 0) {
+        tempNum /= primeNumbers[a];
+        arrayTempDenominator.push(primeNumbers[a]);
         break;
       }
     }
   }
+  return arrayTempDenominator;
 };
 
-const generateRound = () => {
-  const tempDenominator1 = [];
-  const tempDenominator2 = [];
-  const num1 = getRandomNum(0, 20);
-  const num2 = getRandomNum(0, 20);
+const findGCDtwoNumbers = (tempDenominator1, tempDenominator2) => {
+  const Denominator1 = tempDenominator1;
+  const Denominator2 = tempDenominator2;
   let result = 1;
-  findTempDenominator(num1, tempDenominator1);
-  findTempDenominator(num2, tempDenominator2);
-  for (let c = tempDenominator1.length; c > 0; c -= 1) {
-    for (let d = tempDenominator2.length; d > 0; d -= 1) {
-      if (tempDenominator1[c - 1] === tempDenominator2[d - 1]) {
-        result *= tempDenominator2[d - 1];
-        tempDenominator1[c - 1] = 1;
-        tempDenominator2[d - 1] = 1;
+  for (let c = Denominator1.length; c > 0; c -= 1) {
+    for (let d = Denominator2.length; d > 0; d -= 1) {
+      if (Denominator1[c - 1] === Denominator2[d - 1]) {
+        result *= Denominator2[d - 1];
+        Denominator1[c - 1] = 1;
+        Denominator2[d - 1] = 1;
       }
     }
   }
+  return result;
+};
+
+const generateRound = () => {
+  const num1 = getRandomNum(0, 20);
+  const num2 = getRandomNum(0, 20);
+  const arrDenominatorFirstNum = findTempDenominator(num1);
+  const arrDenominatorSecondNum = findTempDenominator(num2);
+  const result = findGCDtwoNumbers(arrDenominatorFirstNum, arrDenominatorSecondNum);
   return [`${num1} ${num2}`, String(result)];
 };
 
