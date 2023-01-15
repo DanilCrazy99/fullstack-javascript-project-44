@@ -11,24 +11,35 @@ const generateProgression = (startNum, lenProgression, steps) => {
   for (let a = 1; a < lenProgression; a += 1) {
     progressionArr.push(startNum + a * steps);
   }
-  const randomCellArr = getRandomNum(0, progressionArr.length - 1);
-  const result = progressionArr[randomCellArr];
-  progressionArr[randomCellArr] = '..';
+  return progressionArr;
+};
+
+const findMissingElement = (arrProgression) => {
+  const arrWithMissingNum = arrProgression;
+  const randomCellArr = getRandomNum(0, arrProgression.length - 1);
+  const result = String(arrProgression[randomCellArr]);
+  arrWithMissingNum[randomCellArr] = '..';
+  return [result, arrWithMissingNum];
+};
+
+const normalString = (arrQuestion) => {
   let question = '';
-  for (let a = 0; a < progressionArr.length; a += 1) {
-    question += progressionArr[a];
-    if (a < progressionArr.length - 1) {
+  for (let a = 0; a < arrQuestion.length; a += 1) {
+    question += arrQuestion[a];
+    if (a < arrQuestion.length - 1) {
       question += ' ';
     }
   }
-  return [question, result];
+  return question;
 };
 
 const generateRound = () => {
   const lenProgression = getRandomNum(5, lengthProgression);
   const startNum = getRandomNum(1, 10);
   const progressionStep = getRandomNum(1, 10);
-  const [question, result] = String(generateProgression(startNum, lenProgression, progressionStep));
+  const progressionArr = generateProgression(startNum, lenProgression, progressionStep);
+  const [result, arrMissNum] = findMissingElement(progressionArr);
+  const question = normalString(arrMissNum);
   return [question, result];
 };
 
