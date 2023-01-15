@@ -26,9 +26,10 @@ const calculation = (firstNum, secondNum, expressionSign) => {
 const generateRound = () => {
   const firstNum = getRandomNum(0, 10);
   const secondNum = getRandomNum(0, 10);
-  const expressionSignInThisRound = getRandomOperators();
-  const result = calculation(firstNum, secondNum, expressionSignInThisRound);
-  return [`${firstNum} ${expressionSignInThisRound} ${secondNum}`, String(result)];
+  const operatorInRound = getRandomOperators();
+  const result = String(calculation(firstNum, secondNum, operatorInRound));
+  const question = `${firstNum} ${operatorInRound} ${secondNum}`;
+  return [question, result];
 };
 
 export default () => { engine(rulesGame, generateRound); };

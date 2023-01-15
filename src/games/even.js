@@ -6,18 +6,17 @@ import engine from '../index.js';
 const rulesGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const checkNumIsEven = (num) => {
-  let result = '';
   if (num % 2) {
-    result = 'no';
-  } else {
-    result = 'yes';
+    return false;
   }
-  return result;
+  return true;
 };
 
 const generateRound = () => {
   const num = getRandomNum(1, 20);
-  return [num, checkNumIsEven(num)];
+  const question = String(num);
+  const answer = checkNumIsEven(num) ? 'yes' : 'no';
+  return [question, answer];
 };
 
 export default () => { engine(rulesGame, generateRound); };
