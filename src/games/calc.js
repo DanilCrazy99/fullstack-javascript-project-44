@@ -5,33 +5,28 @@ import engine from '../index.js';
 
 const rulesGame = 'What is the result of the expressionSign?';
 
-const getRandomexpressionSign = () => {
-  const expressionSignArr = ['+', '-', '*'];
-  return expressionSignArr[getRandomNum(0, expressionSignArr.length - 1)];
+const getRandomOperators = () => {
+  const operators = ['+', '-', '*'];
+  return operators[getRandomNum(0, operators.length - 1)];
 };
 
 const calculation = (firstNum, secondNum, expressionSign) => {
-  let result = 0;
   switch (expressionSign) {
     case '+':
-      result = firstNum + secondNum;
-      break;
+      return firstNum + secondNum;
     case '-':
-      result = firstNum - secondNum;
-      break;
+      return firstNum - secondNum;
     case '*':
-      result = firstNum * secondNum;
-      break;
+      return firstNum * secondNum;
     default:
       throw new Error(`Operator ${expressionSign} - is incorrect`);
   }
-  return result;
 };
 
 const generateRound = () => {
   const firstNum = getRandomNum(0, 10);
   const secondNum = getRandomNum(0, 10);
-  const expressionSignInThisRound = getRandomexpressionSign();
+  const expressionSignInThisRound = getRandomOperators();
   const result = calculation(firstNum, secondNum, expressionSignInThisRound);
   return [`${firstNum} ${expressionSignInThisRound} ${secondNum}`, String(result)];
 };
