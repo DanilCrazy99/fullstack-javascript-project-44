@@ -6,16 +6,19 @@ const engine = (gameDescription, newRound) => {
   const namePlayer = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${namePlayer}!`);
   console.log(gameDescription);
+
   for (let i = 0; i < countRounds; i += 1) {
     const [questionRound, resultRound] = newRound();
     console.log(`Question: ${questionRound}`);
     const answerUser = readlineSync.question('Your answer: ');
     if (resultRound !== answerUser) {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${resultRound}'.`);
-      return console.log(`Let's try again, ${namePlayer}!`);
+      console.log(`Let's try again, ${namePlayer}!`);
+      return 0;
     }
   }
-  return console.log(`Congratulations, ${namePlayer}!`);
+  console.log(`Congratulations, ${namePlayer}!`);
+  return 0;
 };
 
 export default engine;
