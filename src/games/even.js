@@ -1,7 +1,7 @@
 // file with logic for brain game "even"
 
 import getRandomNum from '../utils.js';
-import ENGINE from '../index.js';
+import engine from '../index.js';
 
 const rulesGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -20,4 +20,4 @@ const generateRound = () => {
   return [num, checkNumIsEven(num)];
 };
 
-export default () => { ENGINE(rulesGame, generateRound); };
+export default () => { engine(rulesGame, generateRound); };

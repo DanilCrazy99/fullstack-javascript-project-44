@@ -2,7 +2,7 @@
 
 import { lengthProgression } from '../games_settings.js';
 import getRandomNum from '../utils.js';
-import ENGINE from '../index.js';
+import engine from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
@@ -32,4 +32,4 @@ const generateRound = () => {
   return [question, String(result)];
 };
 
-export default () => { ENGINE(rules, generateRound); };
+export default () => { engine(rules, generateRound); };

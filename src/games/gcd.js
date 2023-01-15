@@ -1,6 +1,6 @@
 // logic for brain game "greatest common divisor"
 
-import ENGINE from '../index.js';
+import engine from '../index.js';
 import getRandomNum from '../utils.js';
 import { primeNumbers } from '../games_settings.js';
 
@@ -46,4 +46,4 @@ const generateRound = () => {
   return [`${num1} ${num2}`, String(result)];
 };
 
-export default () => { ENGINE(rules, generateRound); };
+export default () => { engine(rules, generateRound); };

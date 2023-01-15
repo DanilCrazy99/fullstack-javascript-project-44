@@ -1,7 +1,7 @@
 // file with logic for brain game "calc"
 
 import getRandomNum from '../utils.js';
-import ENGINE from '../index.js';
+import engine from '../index.js';
 
 const rulesGame = 'What is the result of the expressionSign?';
 
@@ -36,4 +36,4 @@ const generateRound = () => {
   return [`${firstNum} ${expressionSignInThisRound} ${secondNum}`, String(result)];
 };
 
-export default () => { ENGINE(rulesGame, generateRound); };
+export default () => { engine(rulesGame, generateRound); };

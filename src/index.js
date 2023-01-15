@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { countRounds } from './games_settings.js';
 
-const ENGINE = (gameDescription, newRound) => {
+const engine = (gameDescription, newRound) => {
   console.log('Welcome to the Brain Games!');
   const namePlayer = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${namePlayer}!`);
@@ -18,4 +18,4 @@ const ENGINE = (gameDescription, newRound) => {
   return console.log(`Congratulations, ${namePlayer}!`);
 };
 
-export default ENGINE;
+export default engine;
