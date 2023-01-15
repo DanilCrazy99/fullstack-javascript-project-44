@@ -28,8 +28,8 @@ const generateRound = () => {
   const lenProgression = getRandomNum(5, lengthProgression);
   const startNum = getRandomNum(1, 10);
   const progressionStep = getRandomNum(1, 10);
-  const [question, result] = generateProgression(startNum, lenProgression, progressionStep);
-  return [question, String(result)];
+  const [question, result] = String(generateProgression(startNum, lenProgression, progressionStep));
+  return [question, result];
 };
 
 export default () => { engine(rules, generateRound); };

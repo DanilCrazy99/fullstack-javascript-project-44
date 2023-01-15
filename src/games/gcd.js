@@ -42,8 +42,9 @@ const generateRound = () => {
   const num2 = getRandomNum(0, 20);
   const arrDenominatorFirstNum = findTempDenominator(num1);
   const arrDenominatorSecondNum = findTempDenominator(num2);
-  const result = findGCDtwoNumbers(arrDenominatorFirstNum, arrDenominatorSecondNum);
-  return [`${num1} ${num2}`, String(result)];
+  const result = String(findGCDtwoNumbers(arrDenominatorFirstNum, arrDenominatorSecondNum));
+  const question = `${num1} ${num2}`;
+  return [question, result];
 };
 
 export default () => { engine(rules, generateRound); };
