@@ -6,10 +6,10 @@ import { primeNumbers } from '../games_settings.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const checkIsPrimeNumber = (number) => (primeNumbers.includes(number));
+const isPrimeNumber = (number) => (primeNumbers.includes(number));
 const generateRound = () => {
   const question = getRandomNum(1, 20);
-  const answer = String(checkIsPrimeNumber(question) ? 'yes' : 'no');
+  const answer = String(isPrimeNumber(question) ? 'yes' : 'no');
   return [question, answer];
 };
 

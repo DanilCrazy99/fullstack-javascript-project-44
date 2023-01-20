@@ -5,7 +5,7 @@ import engine from '../index.js';
 
 const rulesGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const checkNumIsEven = (num) => {
+const isEven = (num) => {
   if (num % 2) {
     return false;
   }
@@ -15,7 +15,7 @@ const checkNumIsEven = (num) => {
 const generateRound = () => {
   const num = getRandomNum(1, 20);
   const question = String(num);
-  const answer = checkNumIsEven(num) ? 'yes' : 'no';
+  const answer = isEven(num) ? 'yes' : 'no';
   return [question, answer];
 };
 
