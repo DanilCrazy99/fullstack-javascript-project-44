@@ -2,7 +2,6 @@
 
 import engine from '../index.js';
 import getRandomNum from '../utils.js';
-// import { primeNumbers } from '../games_settings.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
