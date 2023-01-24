@@ -11,17 +11,22 @@ const generateProgression = (startNum, lenProgression, steps) => {
   for (let a = 1; a < lenProgression; a += 1) {
     progression.push(startNum + a * steps);
   }
+  return progression;
+};
+
+const takeRandomNumInProgression = (progression) => {
   const randomPlaceInArr = getRandomNum(0, progression.length - 1);
   const result = String(progression[randomPlaceInArr]);
   progression[randomPlaceInArr] = '..';
-  return [progression, result];
+  return result;
 };
 
 const generateRound = () => {
   const lenProgression = getRandomNum(5, lengthProgression);
   const startNum = getRandomNum(1, 10);
   const progressionStep = getRandomNum(1, 10);
-  const [progression, result] = generateProgression(startNum, lenProgression, progressionStep);
+  const progression = generateProgression(startNum, lenProgression, progressionStep);
+  const result = takeRandomNumInProgression(progression);
   const question = progression.join(' ');
   return [question, result];
 };
