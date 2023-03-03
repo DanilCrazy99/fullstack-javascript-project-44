@@ -3,7 +3,7 @@
 import getRandomNum from '../utils.js';
 import engine from '../index.js';
 
-const rulesGame = 'What is the result of the expressionSign?';
+const rulesGame = 'What is the result of the expression sign?';
 
 const getRandomOperators = () => {
   const operators = ['+', '-', '*'];
